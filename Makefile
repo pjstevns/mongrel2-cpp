@@ -1,8 +1,9 @@
-CXX=g++
-CXXFLAGS=-ggdb -Wall -Wextra -Ilib
+CXX?=g++
+OPTFLAGS=
 OPTLIBS?=-L/usr/local/lib 
 PREFIX?=/usr/local
 
+CXXFLAGS=-ggdb -Wall -Wextra -Ilib $(OPTFLAGS)
 LDFLAGS=$(OPTLIBS) -L.
 
 LIBS=-lzmq -ljson -lm2pp
